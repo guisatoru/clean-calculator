@@ -16,23 +16,26 @@ const botaoC = document.querySelector("#teclado button:nth-child(2)");
 let string = "";
 Array.from(teclado).forEach((button) => {
   button.addEventListener("click", (e) => {
-    if (e.target.innerHTML == "=") {
+    let buttonText = e.target.textContent.trim(); 
+    buttonText = buttonText.replace("×", "*");
+    
+    if (buttonText === "=") {
       string = eval(string);
       inputResultado.value = string;
     } 
     
-    else if (e.target.innerHTML == "C") {
+    else if (buttonText === "C") {
       string = "";
       inputResultado.value = string;
     } 
     
-    else if (e.target.innerHTML == "CE") {
+    else if (buttonText === "CE") {
       string = string.substring(0, string.length - 1);
       inputResultado.value = string;
     } 
     
     else {
-      string += e.target.innerHTML;
+      string += buttonText;
       inputResultado.value = string;
     }
   });
