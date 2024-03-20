@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialised;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: linear-gradient(180deg, #72b458 0%, #2b4221 100%);
+    font-family: Rubik;
+    letter-spacing: -0.02em;
+
+    display: grid;
+    place-content: center;
+}
+
+#calculadora {
+    width: 356px;
+    height: 566px;
+
+    background: #2D2A37;
+    border-radius: 48px;
+    box-shadow: 0 60px 80px rgba(0, 0, 0, 0.60), 0 45px 26px rgba(0, 0, 0, 0.14);
+}
+
+#visor {
+    margin-top: 54px;
+    padding-inline: 54px;
+    min-height: 50px;
+}
+
+#resultado {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    justify-content: flex-end;
+}
+
+#resultado input {
+    font-size: 36px;
+    line-height: 140%;
+    color: #EBEBEB;
+    text-align: right;
+    border: none;
+    width: 100%;
+    background: #2D2A37;
+}
+
+#teclado {
+    margin-top: 26px;
+    margin-inline: 32px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0%, rgba(255, 255, 255, 0.05) 100%), #2D2A37;
+    border-radius: 999px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+
+
+    font-size: 24px;
+    line-height: 28px;
+    color: #EBEBEB;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+button:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.secondary {
+    color: #77bd5b;
+}
+
+.tertiary {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #426434;
+}
+
+.tertiary:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #558143;
+}
+
+.tertiary:active {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #6aa154;
+}
+
+.quartiary {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), #80c466;
+}
+
+.quartiary:hover {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), rgb(149, 192, 133);
+}
+
+.quartiary:active {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.05) 0.01%, rgba(255, 255, 255, 0.05) 100%), rgb(157, 223, 133);
+}
