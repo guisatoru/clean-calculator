@@ -17,7 +17,7 @@ let string = "";
 Array.from(teclado).forEach((button) => {
   button.addEventListener("click", (e) => {
     let buttonText = e.target.textContent.trim(); 
-    buttonText = buttonText.replace("×", "*");
+    buttonText = buttonText.replace("X", "*");
     
     if (buttonText === "=") {
       string = eval(string);
